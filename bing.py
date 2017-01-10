@@ -81,7 +81,7 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
     http_request += "Host: api.datamarket.azure.com\r\n"
     http_request += "Connection: close\r\n"
     http_request += "Authorization: Basic %s\r\n" % base64.b64encode(":%s" % bing_api_key)
-    http_request += "User-Agent: Blackhat Python\r\n\r\n"
+    http_request += "User-Agent: Python Agent\r\n\r\n"
     
     json_body = self._callbacks.makeHttpRequest("api.datamarket.azure.com",443,True,http_request).tostring()
     
